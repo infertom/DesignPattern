@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="CompositeUML">
+  <packagedElement xmi:type="uml:Package" xmi:id="_lEK7UYCSEeWE1eO_wdrRBA" name="Composite">
+    <packagedElement xmi:type="uml:Class" xmi:id="_lEK7UoCSEeWE1eO_wdrRBA" name="LeafNode">
+      <generalization xmi:id="_lOZ1YICSEeWE1eO_wdrRBA" general="_lEK7U4CSEeWE1eO_wdrRBA"/>
+      <ownedAttribute xmi:id="_lP5DIICSEeWE1eO_wdrRBA" name="name" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_lP5DIoCSEeWE1eO_wdrRBA" name="depth" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_lP5DI4CSEeWE1eO_wdrRBA" name="getName" visibility="public">
+        <ownedParameter xmi:id="_lP5DJICSEeWE1eO_wdrRBA" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lP5DJYCSEeWE1eO_wdrRBA" name="mPrint" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lEK7U4CSEeWE1eO_wdrRBA" name="Node" clientDependency="_lP5DJ4CSEeWE1eO_wdrRBA" isAbstract="true">
+      <interfaceRealization xmi:id="_lP5DJ4CSEeWE1eO_wdrRBA" name="Iterable&lt;Node>" supplier="_lP5DJoCSEeWE1eO_wdrRBA" client="_lEK7U4CSEeWE1eO_wdrRBA" contract="_lP5DJoCSEeWE1eO_wdrRBA"/>
+      <ownedOperation xmi:id="_lP5DKICSEeWE1eO_wdrRBA" name="addNode" visibility="public">
+        <ownedParameter xmi:id="_lP5DKYCSEeWE1eO_wdrRBA" name="a" type="_lEK7U4CSEeWE1eO_wdrRBA"/>
+        <ownedParameter xmi:id="_lP5DKoCSEeWE1eO_wdrRBA" name="return" type="_lEK7U4CSEeWE1eO_wdrRBA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lP5DK4CSEeWE1eO_wdrRBA" name="removeSubNode" visibility="public">
+        <ownedParameter xmi:id="_lP5DLICSEeWE1eO_wdrRBA" name="index">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_lP5DLYCSEeWE1eO_wdrRBA" name="return" type="_lEK7U4CSEeWE1eO_wdrRBA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lP5DLoCSEeWE1eO_wdrRBA" name="clearSubNode" visibility="public"/>
+      <ownedOperation xmi:id="_lQC0IICSEeWE1eO_wdrRBA" name="iterator" visibility="public">
+        <ownedParameter xmi:id="_lQC0IYCSEeWE1eO_wdrRBA" name="return" type="_lOQEYoCSEeWE1eO_wdrRBA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lQC0IoCSEeWE1eO_wdrRBA" name="mPrint" visibility="public" isAbstract="true"/>
+      <ownedOperation xmi:id="_lQC0I4CSEeWE1eO_wdrRBA" name="getName" visibility="public" isAbstract="true">
+        <ownedParameter xmi:id="_lQC0JICSEeWE1eO_wdrRBA" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_lEK7VYCSEeWE1eO_wdrRBA" name="RootNode">
+      <generalization xmi:id="_lQC0KICSEeWE1eO_wdrRBA" general="_lEK7U4CSEeWE1eO_wdrRBA"/>
+      <ownedAttribute xmi:id="_lQC0KYCSEeWE1eO_wdrRBA" name="name" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_lQC0KoCSEeWE1eO_wdrRBA" name="depth" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_lQL-EYCSEeWE1eO_wdrRBA" name="subNode" visibility="private" type="_lQL-EICSEeWE1eO_wdrRBA"/>
+      <ownedOperation xmi:id="_lQL-EoCSEeWE1eO_wdrRBA" name="getName" visibility="public">
+        <ownedParameter xmi:id="_lQL-E4CSEeWE1eO_wdrRBA" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lQL-FICSEeWE1eO_wdrRBA" name="addNode" visibility="public">
+        <ownedParameter xmi:id="_lQL-FYCSEeWE1eO_wdrRBA" name="a" type="_lEK7U4CSEeWE1eO_wdrRBA"/>
+        <ownedParameter xmi:id="_lQL-FoCSEeWE1eO_wdrRBA" name="return" type="_lEK7U4CSEeWE1eO_wdrRBA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lQL-F4CSEeWE1eO_wdrRBA" name="removeSubNode" visibility="public">
+        <ownedParameter xmi:id="_lQL-GICSEeWE1eO_wdrRBA" name="index">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_lQL-GYCSEeWE1eO_wdrRBA" name="return" type="_lEK7U4CSEeWE1eO_wdrRBA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lQL-GoCSEeWE1eO_wdrRBA" name="clearSubNode" visibility="public"/>
+      <ownedOperation xmi:id="_lQVvEICSEeWE1eO_wdrRBA" name="iterator" visibility="public">
+        <ownedParameter xmi:id="_lQVvEYCSEeWE1eO_wdrRBA" name="return" type="_lOQEYoCSEeWE1eO_wdrRBA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lQVvEoCSEeWE1eO_wdrRBA" name="mPrint" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_lP5DJoCSEeWE1eO_wdrRBA" name="Iterable&lt;Node>"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_lOQEYICSEeWE1eO_wdrRBA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_lOQEYYCSEeWE1eO_wdrRBA" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_lOQEYoCSEeWE1eO_wdrRBA" name="Iterator"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_lOQEY4CSEeWE1eO_wdrRBA" name="List"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_lOQEZICSEeWE1eO_wdrRBA" name="ArrayList"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_lQL-EICSEeWE1eO_wdrRBA" name="List&lt;Node>"/>
+</uml:Model>

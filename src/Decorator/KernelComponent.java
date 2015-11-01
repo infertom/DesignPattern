@@ -10,7 +10,7 @@ public class KernelComponent implements ComponentInter {
 	@Override
 	public void mPrint() {
 		for (Product p: client){
-			System.out.println("\t" + p.getName() + " " + p.getSize() + "     \t" + p.getMomey());
+			System.out.println("\t" + p.getName() + " " + p.getSize() + "     \t" + p.getMoney());
 		}
 		System.out.println("");
 		System.out.println("\t合计(人民币)    \t" + client.getSum());

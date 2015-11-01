@@ -19,7 +19,7 @@ public class Client implements Iterable<Product>{
 	public double getSum(){
 		double sum = 0;
 		for ( Product p: obj){
-			sum += p.getMomey();
+			sum += p.getMoney();
 		}
 		return sum;
 	}

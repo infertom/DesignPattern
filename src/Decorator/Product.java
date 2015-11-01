@@ -3,16 +3,16 @@ package Decorator;
 public class Product {
 	private String name;
 	private String size;
-	private double momey;
+	private double money;
 	
 	public Product(String name, String size, double momey){
 		this.name = name;
 		this.size = size;
-		this.momey = momey;
+		this.money = momey;
 	}
 	
-	public double getMomey(){
-		return this.momey;
+	public double getMoney(){
+		return this.money;
 	}
 	
 	public String getSize(){

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="DecoratorUML">
+  <packagedElement xmi:type="uml:Package" xmi:id="_-mkUUICOEeWE1eO_wdrRBA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_-mkUUYCOEeWE1eO_wdrRBA" name="util"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_czPHR4CPEeWE1eO_wdrRBA" name="List&lt;Product>"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_cv9w1YCPEeWE1eO_wdrRBA" name="ComponentInter">
+    <ownedOperation xmi:id="_czF9WoCPEeWE1eO_wdrRBA" name="mPrint" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_cv9w1ICPEeWE1eO_wdrRBA" name="KernelComponent" clientDependency="_czF9V4CPEeWE1eO_wdrRBA">
+    <interfaceRealization xmi:id="_czF9V4CPEeWE1eO_wdrRBA" name="ComponentInter" supplier="_cv9w1YCPEeWE1eO_wdrRBA" client="_cv9w1ICPEeWE1eO_wdrRBA" contract="_cv9w1YCPEeWE1eO_wdrRBA"/>
+    <ownedOperation xmi:id="_czF9WYCPEeWE1eO_wdrRBA" name="mPrint" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_cwG6woCPEeWE1eO_wdrRBA" name="OtherDecoratorAb" clientDependency="_czY4QoCPEeWE1eO_wdrRBA" isAbstract="true">
+    <ownedAttribute xmi:id="_czY4Q4CPEeWE1eO_wdrRBA" name="component" visibility="package" type="_cv9w1YCPEeWE1eO_wdrRBA"/>
+    <interfaceRealization xmi:id="_czY4QoCPEeWE1eO_wdrRBA" name="ComponentInter" supplier="_cv9w1YCPEeWE1eO_wdrRBA" client="_cwG6woCPEeWE1eO_wdrRBA" contract="_cv9w1YCPEeWE1eO_wdrRBA"/>
+    <ownedOperation xmi:id="_czY4RICPEeWE1eO_wdrRBA" name="mPrint" visibility="public" isAbstract="true"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_cv9w0oCPEeWE1eO_wdrRBA" name="FirstDecorator">
+    <generalization xmi:id="_cxASpYCPEeWE1eO_wdrRBA" general="_cwG6woCPEeWE1eO_wdrRBA"/>
+    <ownedOperation xmi:id="_cxASpoCPEeWE1eO_wdrRBA" name="mPrint" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_cwG6wICPEeWE1eO_wdrRBA" name="SecondDecorator">
+    <generalization xmi:id="_czPHUICPEeWE1eO_wdrRBA" general="_cwG6woCPEeWE1eO_wdrRBA"/>
+    <ownedOperation xmi:id="_czPHUYCPEeWE1eO_wdrRBA" name="mPrint" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_cwG6wYCPEeWE1eO_wdrRBA" name="ThirdDecrator">
+    <ownedOperation xmi:id="_czY4QYCPEeWE1eO_wdrRBA" name="mPrint" visibility="public"/>
+  </packagedElement>
+</uml:Model>

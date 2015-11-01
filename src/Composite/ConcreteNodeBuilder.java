@@ -21,7 +21,7 @@ public class ConcreteNodeBuilder implements NodeBuilder {
 		Node node;
 		if ( num == depth ) node = new LeafNode("Level_" + num + str, num);
 		else{
-			node = new RootNode("Level" + num + str, num);
+			node = new RootNode("Level_" + num + str, num);
 			node.addNode(buildLeft(num + 1, str + "_1"))
 				 .addNode(buildRight(num + 1, str + "_2"));
 		}
@@ -33,7 +33,7 @@ public class ConcreteNodeBuilder implements NodeBuilder {
 		Node node;
 		if ( num == depth ) node = new LeafNode("Level_" + num + str, num);
 		else{
-			node = new RootNode("Level" + num + str, num);
+			node = new RootNode("Level_" + num + str, num);
 			node.addNode(buildLeft(num + 1, str + "_1"))
 				 .addNode(buildRight(num + 1, str + "_2"));
 		}

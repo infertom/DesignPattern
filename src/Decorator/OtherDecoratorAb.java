@@ -1,9 +1,9 @@
 package Decorator;
 
-public abstract class OtherDecorator implements ComponentInter {
+public abstract class OtherDecoratorAb implements ComponentInter {
 	ComponentInter component;
 	
-	public OtherDecorator(ComponentInter d){
+	public OtherDecoratorAb(ComponentInter d){
 		component = d;
 	}
 

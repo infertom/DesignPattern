@@ -1,6 +1,6 @@
 package Decorator;
 
-public class FirstDecorator extends OtherDecorator {
+public class FirstDecorator extends OtherDecoratorAb {
 
 	public FirstDecorator(ComponentInter d) {
 		super(d);
